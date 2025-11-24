@@ -22,12 +22,12 @@ pipeline {
             }
         }
 
-        stage('Run Application') {
-            steps {
-                echo "Running the JAR..."
-                sh 'java -jar target/*.jar'
-            }
-        }
+stage('Run Application') {
+    steps {
+        echo "Skipping Run Application in Jenkins"
+    }
+}
+
 
         stage('Archive Artifact') {
             steps {
