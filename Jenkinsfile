@@ -8,12 +8,13 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                echo "Building the project..."
-                sh './mvnw clean package -DskipTests'
-            }
-        }
+stage('Build') {
+    steps {
+        echo "Building the project..."
+        sh './mvnw clean package -DskipTests'  // skip tests
+    }
+}
+
 
         stage('Run Tests') {
             steps {
